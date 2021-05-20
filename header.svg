@@ -54,13 +54,13 @@
 
     </style>
     <g id="ah-head-standard" >
-      <image href="./ahh.png" height="399" width="360" x="60%"/>
+      <image href="https://github.com/DanElliottPalmer/danelliottpalmer/raw/main/ahh.png" height="399" width="360" x="60%"/>
     </g>
     <g id="ah-head-flipped" x="0">
-      <image href="./ahh.png" height="399" width="360" />
+      <image href="https://github.com/DanElliottPalmer/danelliottpalmer/raw/main/ahh.png" height="399" width="360" />
     </g>
     <g id="oo-head">
-      <image href="./oo.png" height="399" width="360" />
+      <image href="https://github.com/DanElliottPalmer/danelliottpalmer/raw/main/oo.png" height="399" width="360" />
     </g>
   </defs>
   <use href="#ah-head-flipped" class="ah-head-flipped" style="animation-delay:0.3s" />
