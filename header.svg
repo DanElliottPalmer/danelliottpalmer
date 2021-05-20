@@ -1,0 +1,97 @@
+<svg
+  viewbox="0 0 1440 320"
+  width="1440" height="320" 
+  xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style type="text/css">
+      @keyframes ah-movement-standard {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-150%);
+        }
+      }
+
+      @keyframes ah-movement-flipped {
+        0% {
+          transform: translateX(-360px) scale(-1, 1) translate(-360px, 0);
+        }
+        100% {
+          transform: translateX(100%) scale(-1, 1) translate(-360px, 0);
+        }
+      }
+
+      @keyframes oo-movement {
+        0% {
+          transform: scale(-1, 1) translate(-360px, 0);
+        }
+        49.99% {
+          transform: scale(-1, 1) translate(-360px, 0);
+        }
+        50% {
+          transform: scale(1, 1) translate(0, 0);
+        }
+        99.99% {
+          transform: scale(1, 1) translate(0, 0);
+        }
+      }
+
+      .ah-head-standard {
+        animation: ah-movement-standard 5s linear infinite;
+        transform: translateX(100%);
+      }
+
+      .ah-head-flipped {
+        animation: ah-movement-flipped 5s linear infinite;
+        transform: translateX(-360px) scale(-1, 1) translate(-360px, 0)
+      }
+
+      .oo-head {
+        animation: oo-movement 1s linear infinite;
+      }
+
+
+    </style>
+    <g id="ah-head-standard" >
+      <image href="./ahh.png" height="399" width="360" x="60%"/>
+    </g>
+    <g id="ah-head-flipped" x="0">
+      <image href="./ahh.png" height="399" width="360" />
+    </g>
+    <g id="oo-head">
+      <image href="./oo.png" height="399" width="360" />
+    </g>
+  </defs>
+  <use href="#ah-head-flipped" class="ah-head-flipped" style="animation-delay:0.3s" />
+  <use href="#ah-head-standard" class="ah-head-standard" style="animation-delay:0.3s" />
+  <use href="#ah-head-flipped" class="ah-head-flipped" style="animation-delay:0.4s" />
+  <use href="#ah-head-standard" class="ah-head-standard" style="animation-delay:0.4s" />
+  <use href="#ah-head-flipped" class="ah-head-flipped" style="animation-delay:0.9s" />
+  <use href="#ah-head-standard" class="ah-head-standard" style="animation-delay:0.9s" />
+  <use href="#ah-head-standard" class="ah-head-standard" style="animation-delay:1.3s" />
+  <use href="#ah-head-flipped" class="ah-head-flipped" style="animation-delay:1.3s" />
+  <use href="#ah-head-flipped" class="ah-head-flipped" style="animation-delay:1.8s" />
+  <use href="#ah-head-standard" class="ah-head-standard" style="animation-delay:1.8s" />
+  <use href="#ah-head-flipped" class="ah-head-flipped" style="animation-delay:1.9s" />
+  <use href="#ah-head-standard" class="ah-head-standard" style="animation-delay:1.9s" />
+  <use href="#ah-head-standard" class="ah-head-standard" style="animation-delay:2.3s" />
+  <use href="#ah-head-flipped" class="ah-head-flipped" style="animation-delay:2.3s" />
+  <use href="#ah-head-flipped" class="ah-head-flipped" style="animation-delay:2.4s" />
+  <use href="#ah-head-standard" class="ah-head-standard" style="animation-delay:2.4s" />
+  <use href="#ah-head-flipped" class="ah-head-flipped" style="animation-delay:3s" />
+  <use href="#ah-head-flipped" class="ah-head-flipped" style="animation-delay:3.3s" />
+  <use href="#ah-head-flipped" class="ah-head-flipped" style="animation-delay:3.7s" />
+  <use href="#ah-head-standard" class="ah-head-standard" style="animation-delay:3s" />
+  <use href="#ah-head-standard" class="ah-head-standard" style="animation-delay:3.3s" />
+  <use href="#ah-head-standard" class="ah-head-standard" style="animation-delay:3.7s" />
+  <use href="#ah-head-flipped" class="ah-head-flipped" style="animation-delay:3.9s" />
+  <use href="#ah-head-flipped" class="ah-head-flipped" style="animation-delay:4.5s" />
+  <use href="#ah-head-standard" class="ah-head-standard" style="animation-delay:3.9s" />
+  <use href="#ah-head-standard" class="ah-head-standard" style="animation-delay:4.5s" />
+  <use href="#ah-head-flipped" class="ah-head-flipped" style="animation-delay:4.8s" />
+  <use href="#ah-head-standard" class="ah-head-standard" style="animation-delay:4.8s" />
+    <g style="transform: translate(45%, 0)">
+    <use href="#oo-head" class="oo-head" />
+  </g>
+</svg>
