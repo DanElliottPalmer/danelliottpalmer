@@ -98,8 +98,69 @@
         animation-duration: 10s;
       }
 
-      .flipped {
+      .flipped-horizontal {
         transform: scale(-1, 1);
+      }
+
+      .flipped-vertical {
+        transform: scale(1, -1);
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .spin {
+        animation: spin 5s linear infinite;
+      }
+
+      @keyframes peek-bottom {
+        0% {
+          transform: translate(0, 100%);
+        }
+        40% {
+          transform: translate(0, 100%);
+        }
+        50% {
+          transform: translate(0, 35%);
+        }
+        60% {
+          transform: translate(0, 100%);
+        }
+        100% {
+          transform: translate(0, 100%);
+        }
+      }
+
+      .peek-bottom {
+        animation: peek-bottom 10s linear infinite;
+      }
+
+      @keyframes peek-top {
+        0% {
+          transform: translate(0, -100%);
+        }
+        40% {
+          transform: translate(0, -100%);
+        }
+        50% {
+          transform: translate(0, -35%);
+        }
+        60% {
+          transform: translate(0, -100%);
+        }
+        100% {
+          transform: translate(0, -100%);
+        }
+      }
+
+      .peek-top {
+        animation: peek-top 10s linear infinite;
       }
 
     </style>
@@ -115,59 +176,59 @@
   </defs>
 
   <g class="left-to-right" style="animation-delay:0.3s">
-    <g class="ah-head"><use href="#ah-head" class="flipped" /></g>
+    <g class="ah-head"><use href="#ah-head" class="flipped-horizontal" /></g>
   </g>
 
   <g class="left-to-right" style="animation-delay:0.4s">
-    <g class="ah-head"><use href="#ah-head" class="flipped" /></g>
+    <g class="ah-head"><use href="#ah-head" class="flipped-horizontal" /></g>
   </g>
 
   <g class="left-to-right faster" style="animation-delay:0.9s">
-    <g class="ah-head"><use href="#ah-head" class="flipped" /></g>
+    <g class="ah-head"><use href="#ah-head" class="flipped-horizontal" /></g>
   </g>
 
   <g class="left-to-right slow" style="animation-delay:1.3s">
-    <g class="ah-head"><use href="#ah-head" class="flipped" /></g>
+    <g class="ah-head"><use href="#ah-head" class="flipped-horizontal" /></g>
   </g>
 
   <g class="left-to-right" style="animation-delay:1.8s">
-    <g class="ah-head"><use href="#ah-head" class="flipped" /></g>
+    <g class="ah-head"><use href="#ah-head" class="flipped-horizontal" /></g>
   </g>
 
   <g class="left-to-right slower" style="animation-delay:1.9s">
-    <g class="ah-head"><use href="#ah-head" class="flipped" /></g>
+    <g class="ah-head"><use href="#ah-head" class="flipped-horizontal" /></g>
   </g>
 
   <g class="left-to-right" style="animation-delay:2.3s">
-    <g class="ah-head"><use href="#ah-head" class="flipped" /></g>
+    <g class="ah-head"><use href="#ah-head" class="flipped-horizontal" /></g>
   </g>
 
   <g class="left-to-right slower" style="animation-delay:2.4s">
-    <g class="ah-head"><use href="#ah-head" class="flipped" /></g>
+    <g class="ah-head"><use href="#ah-head" class="flipped-horizontal" /></g>
   </g>
 
   <g class="left-to-right" style="animation-delay:3s">
-    <g class="ah-head"><use href="#ah-head" class="flipped" /></g>
+    <g class="ah-head"><use href="#ah-head" class="flipped-horizontal" /></g>
   </g>
 
   <g class="left-to-right slower" style="animation-delay:3.3s">
-    <g class="ah-head"><use href="#ah-head" class="flipped" /></g>
+    <g class="ah-head"><use href="#ah-head" class="flipped-horizontal" /></g>
   </g>
 
   <g class="left-to-right" style="animation-delay:3.7s">
-    <g class="ah-head"><use href="#ah-head" class="flipped" /></g>
+    <g class="ah-head"><use href="#ah-head" class="flipped-horizontal" /></g>
   </g>
 
   <g class="left-to-right" style="animation-delay:3.9s">
-    <g class="ah-head"><use href="#ah-head" class="flipped" /></g>
+    <g class="ah-head"><use href="#ah-head" class="flipped-horizontal" /></g>
   </g>
 
   <g class="left-to-right faster" style="animation-delay:4.5s">
-    <g class="ah-head"><use href="#ah-head" class="flipped" /></g>
+    <g class="ah-head"><use href="#ah-head" class="flipped-horizontal" /></g>
   </g>
 
   <g class="left-to-right" style="animation-delay:4.8s">
-    <g class="ah-head"><use href="#ah-head" class="flipped" /></g>
+    <g class="ah-head"><use href="#ah-head" class="flipped-horizontal" /></g>
   </g>
 
   <g class="right-to-left" style="animation-delay:0.3s">
@@ -230,6 +291,27 @@
     <use href="#oo-head" class="oo-head" />
   </g>
 
-  <use href="#eee-head" class="eee-head" style="transform: translate(25%, 50%) scale(.5);" />
-  <use href="#eee-head" class="eee-head" style="transform: translate(75%, 50%) scale(.5);" />
+  <g class="peek-bottom">
+    <use href="#eee-head" style="transform: translate(75%, 50%) scale(.5);" />  
+  </g>
+
+  <g class="peek-top" style="animation-delay:5s;transform:translateY(-100%);">
+    <g style="transform: translate(25%, 50%) scale(.5);">
+      <use href="#eee-head" class="flipped-vertical" />  
+    </g>
+  </g>
+
+  <g style="transform: translate(98%, 10%) scale(.1);">
+    <use href="#eee-head" class="spin" />
+  </g>
+  <g style="transform: translate(98%, 90%) scale(.1);">
+    <use href="#eee-head" class="spin" />
+  </g>
+  <g style="transform: translate(2%, 10%) scale(.1);">
+    <use href="#eee-head" class="spin" />
+  </g>
+  <g style="transform: translate(2%, 90%) scale(.1);">
+    <use href="#eee-head" class="spin" />
+  </g>
+
 </svg>
